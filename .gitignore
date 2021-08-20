@@ -1,0 +1,9 @@
+*~
+
+bin/
+obj/
+
+*.dylib
+*.so
+
+mono_crash.*.json

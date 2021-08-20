@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <BaseOutputPath Condition="'$(UseMonoRuntime)' == 'true'">bin/onmono/</BaseOutputPath>
+    <BaseOutputPath Condition="'$(UseMonoRuntime)' != 'true'">bin/onclr/</BaseOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\helper\helper.ilproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\natural\libnatural.dylib" Link=".\libnatural.dylib" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>
