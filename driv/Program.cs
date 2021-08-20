@@ -30,12 +30,7 @@ public class Driv
 	var d = new Driv();
 	MainFunc m = CalledFromNative;
 	natural_capture (Marshal.GetFunctionPointerForDelegate(m));
-	(new Thread((o)=> {
-	    Console.WriteLine ("thread started");
-	    natural_invoke ();
-	    (o as Driv)?.sema?.Release ();
-	})).Start(d);
-	d.sema.Wait();
+	natural_invoke ();
 	Console.WriteLine ("done");
 
     }
