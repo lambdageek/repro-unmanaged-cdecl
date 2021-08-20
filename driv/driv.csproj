@@ -13,7 +13,7 @@
     <BaseOutputPath Condition="'$(UseMonoRuntime)' != 'true'">bin/onclr/</BaseOutputPath>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="false">
     <ProjectReference Include="..\helper\helper.ilproj" />
   </ItemGroup>
 

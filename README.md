@@ -68,6 +68,8 @@ driv/bin/onclr/Debug/net6.0/osx-x64/driv
 
 Output:
 ```
-Unhandled exception. System.TypeLoadException: The signature is incorrect.
-Abort trap: 6
+!Hello World from CoreCLR!
+CalledFromNative
+abcdefg
+done
 ```
